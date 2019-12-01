@@ -1,3 +1,10 @@
+## 0.0.1-canary.3 - 2019-12-01
+
+#### 🐞 Fixes
+
+- Actually use packaged data instead of dep
+  ([eb7572d](https://github.com/email-types/stylis-plugin-mso/commit/eb7572d))
+
 ## 0.0.1-canary.2 - 2019-12-01
 
 #### 🚀 Updates

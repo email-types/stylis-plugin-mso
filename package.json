@@ -1,6 +1,6 @@
 {
   "name": "stylis-plugin-mso",
-  "version": "0.0.1-canary.2",
+  "version": "0.0.1-canary.3",
   "description": "A Stylis plugin that adds support for the mso- CSS vendor prefix",
   "main": "dist/cjs/index.js",
   "types": "dist/cjs/index.d.ts",
