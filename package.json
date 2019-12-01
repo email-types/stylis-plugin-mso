@@ -1,0 +1,96 @@
+{
+  "name": "stylis-plugin-mso",
+  "version": "0.0.1-canary.1",
+  "description": "A Stylis plugin that adds support for the mso- CSS vendor prefix",
+  "main": "dist/cjs/index.js",
+  "types": "dist/cjs/index.d.ts",
+  "module": "dist/esm/index.js",
+  "sideEffects": false,
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "clean": "rm -rf ./dist",
+    "prune": "rm -rf ./{,*/,**/*/}{node_modules,coverage,*.lock,*.log,*.tsbuildinfo,dist}",
+    "prebuild": "ts-node --project ./tsconfig.node.json ./scripts/generate.ts",
+    "build": "yarn run clean && yarn run build:cjs && yarn run build:esm && yarn run types",
+    "build:cjs": "TARGET=cjs babel -x .ts,.tsx src -d dist/cjs",
+    "build:esm": "TARGET=esm babel -x .ts,.tsx src -d dist/esm",
+    "types": "tsc --declaration --emitDeclarationOnly --declarationDir dist/cjs",
+    "typescript": "tsc --noEmit --declaration",
+    "test": "yarn build && yarn run lint && yarn run jest",
+    "jest": "jest --colors --logHeapUsage",
+    "jest:coverage": "yarn run jest --coverage",
+    "lint": "eslint . --ext js,ts --max-warnings=0 --report-unused-disable-directives",
+    "pretty": "prettier \"**/*.{js,ts,md,json}\" --write",
+    "changelog": "conventional-changelog -p conventional-changelog-beemo -i CHANGELOG.md -s",
+    "version:canary": "yarn version --prerelease --preid canary"
+  },
+  "lint-staged": {
+    "**/*.{js,ts,md,json}": [
+      "yarn run pretty"
+    ],
+    "**/*.{js,ts}": [
+      "yarn run lint --fix"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.7.4",
+    "@babel/core": "^7.7.4",
+    "@babel/preset-env": "^7.7.4",
+    "@babel/preset-typescript": "^7.7.4",
+    "@email-types/data": "^1.0.0-canary.2",
+    "@emotion/cache": "^10.0.19",
+    "@emotion/core": "^10.0.22",
+    "@types/fs-extra": "^8.0.1",
+    "@types/jest": "^24.0.23",
+    "@types/node": "^12.12.14",
+    "@types/prettier": "^1.19.0",
+    "@types/react": "^16.9.13",
+    "@types/react-test-renderer": "^16.9.1",
+    "@typescript-eslint/parser": "^2.7.0",
+    "colors": "^1.4.0",
+    "conventional-changelog-beemo": "^1.5.3",
+    "conventional-changelog-cli": "^2.0.28",
+    "eslint": "^6.6.0",
+    "eslint-config-airbnb-typescript": "^6.3.1",
+    "eslint-config-prettier": "^6.6.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jest": "^23.0.4",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.1",
+    "eslint-plugin-react": "^7.17.0",
+    "eslint-plugin-react-hooks": "^1.7.0",
+    "fs-extra": "^8.1.0",
+    "husky": "^3.0.9",
+    "jest": "^24.9.0",
+    "jest-emotion": "^10.0.25",
+    "lint-staged": "^10.0.0-1",
+    "prettier": "^1.19.1",
+    "react": "^16.12.0",
+    "react-test-renderer": "^16.12.0",
+    "stylis": "^3.5.4",
+    "ts-node": "^8.5.4",
+    "typescript": "^3.7.2"
+  },
+  "keywords": [
+    "css-in-js",
+    "email",
+    "stylis",
+    "mso",
+    "outlook",
+    "css"
+  ],
+  "author": "buames",
+  "homepage": "https://github.com/email-types/msotype",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/email-types/msotype.git"
+  },
+  "license": "MIT"
+}

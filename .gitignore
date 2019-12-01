@@ -1,0 +1,15 @@
+# dependencies
+node_modules
+*.lock
+
+# build
+dist
+
+# test
+coverage
+
+# logs
+*.log
+
+# dumb
+.DS_Store
