@@ -87,10 +87,10 @@
     "css"
   ],
   "author": "buames",
-  "homepage": "https://github.com/email-types/msotype",
+  "homepage": "https://github.com/email-types/stylis-plugin-mso",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/email-types/msotype.git"
+    "url": "git+https://github.com/email-types/stylis-plugin-mso.git"
   },
   "license": "MIT"
 }
