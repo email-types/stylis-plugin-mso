@@ -1,3 +1,16 @@
+## 0.0.1-canary.2 - 2019-12-01
+
+#### 🚀 Updates
+
+- Replace deps with packaged data
+  ([f7eb67b](https://github.com/email-types/stylis-plugin-mso/commit/f7eb67b))
+
+#### 🛠 Internals
+
+- Initial commit, separating from [@email-types](https://github.com/email-types)
+  mono
+  ([030eabd](https://github.com/email-types/stylis-plugin-mso/commit/030eabd))
+
 ## 0.0.1-canary.1 - 2019-11-17
 
 #### 🛠 Internals
