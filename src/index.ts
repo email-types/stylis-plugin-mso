@@ -1,17 +1,8 @@
-import { alternatives } from '@email-types/data/mso';
+import { properties } from './data';
+
+type PropertyName = keyof typeof properties;
 
 export type Plugin = (context: number, content: string) => string | void;
-
-const properties = Object.keys(alternatives).reduce<Record<string, string>>(
-  (result, property) => {
-    // split the mso alt property to get the matched css style
-    // eg. `mso-line-height-alt` becomes `line-height`.
-    const [, name] = property.split(/mso-|-alt/);
-    result[name] = property;
-    return result;
-  },
-  {},
-);
 
 export const createPlugin = <T>(
   options: { prefix: T | boolean } = { prefix: true },
@@ -21,7 +12,7 @@ export const createPlugin = <T>(
     if (context === 1) {
       if (typeof options.prefix === 'boolean' && options.prefix !== false) {
         const [key, value] = content.trim().split(':');
-        const property = properties[key];
+        const property = properties[(key as unknown) as PropertyName];
         if (property) {
           return `${property}:${value};${content}`;
         }
