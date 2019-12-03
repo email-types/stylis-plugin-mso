@@ -15,36 +15,24 @@ module.exports = {
       node: { extensions },
     },
   },
-  rules: {
-    'no-param-reassign': 0,
-    'import/prefer-default-export': 0,
-    'import/no-extraneous-dependencies': [
-      'error',
-      {
-        devDependencies: ['**/*.ts'],
-        optionalDependencies: false,
-      },
-    ],
-  },
   overrides: [
     {
       files: ['*.test.ts'],
-      extends: ['plugin:jest/recommended'],
+      extends: ['plugin:jest/recommended', 'plugin:jest/style'],
       plugins: ['jest'],
-      env: {
-        jest: true,
-        node: true,
-      },
-      rules: {
-        'jest/prefer-to-be-null': 2,
-        'jest/prefer-to-be-undefined': 2,
-        'jest/prefer-to-have-length': 2,
-      },
+      env: { jest: true },
     },
     {
       files: ['scripts/**/*'],
       rules: {
-        'no-console': 0,
+        'no-console': 'off',
+        'import/no-extraneous-dependencies': [
+          'error',
+          {
+            devDependencies: true,
+            optionalDependencies: false,
+          },
+        ],
       },
     },
   ],

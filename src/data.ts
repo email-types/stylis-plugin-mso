@@ -38,4 +38,4 @@ export const properties = {
   'text-indent': 'mso-text-indent-alt',
   'vertical-align': 'mso-vertical-align-alt',
   width: 'mso-width-alt',
-} as const;
+};

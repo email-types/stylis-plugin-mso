@@ -10,7 +10,7 @@ export const createPlugin = <T>(
   const plugin: Plugin = (context, content) => {
     // only run on a property declaration
     if (context === 1) {
-      if (typeof options.prefix === 'boolean' && options.prefix !== false) {
+      if (options.prefix) {
         const [key, value] = content.trim().split(':');
         const property = properties[(key as unknown) as PropertyName];
         if (property) {

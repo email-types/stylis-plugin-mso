@@ -10,7 +10,7 @@ const specs: Array<{
   name: string;
   sample: SerializedStyles;
   expected: Record<string, string>;
-  prefix?: boolean;
+  prefix: boolean;
 }> = [
   {
     name: 'returns with mso prefix',
@@ -33,16 +33,19 @@ const specs: Array<{
       color: tomato;
     `,
     expected: { color: 'tomato', 'mso-color-alt': 'tomato' },
+    prefix: true,
   },
   {
     name: 'returns with a fixed mso prefix',
     sample: css({ MsoColorAlt: 'tomato' }),
     expected: { 'mso-color-alt': 'tomato' },
+    prefix: true,
   },
   {
     name: 'returns with a fixed mso prefix when using an object',
     sample: css({ msoColorAlt: 'tomato' }),
     expected: { 'mso-color-alt': 'tomato' },
+    prefix: true,
   },
   {
     name: 'returns with a fixed mso prefix when using string literal',
@@ -50,6 +53,22 @@ const specs: Array<{
       -mso-color-alt: tomato;
     `,
     expected: { 'mso-color-alt': 'tomato' },
+    prefix: true,
+  },
+  {
+    name: 'returns with all prefixes, including the mso prefix',
+    sample: css({
+      appearance: 'none',
+      color: 'tomato',
+    }),
+    expected: {
+      '-webkit-appearance': 'none',
+      '-moz-appearance': 'none',
+      appearance: 'none',
+      'mso-color-alt': 'tomato',
+      color: 'tomato',
+    },
+    prefix: true,
   },
 ];
 
