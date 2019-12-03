@@ -43,7 +43,7 @@
     "@babel/core": "^7.7.4",
     "@babel/preset-env": "^7.7.4",
     "@babel/preset-typescript": "^7.7.4",
-    "@email-types/data": "^1.0.0-canary.2",
+    "@email-types/data": "^1.0.0-canary.3",
     "@emotion/cache": "^10.0.19",
     "@emotion/core": "^10.0.22",
     "@postmates/eslint-config": "^5.1.1",
