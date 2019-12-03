@@ -34,6 +34,20 @@ exports[`stylis-plugin-mso returns with a fixed mso prefix when using string lit
 />
 `;
 
+exports[`stylis-plugin-mso returns with all prefixes, including the mso prefix 1`] = `
+.emotion-0 {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  mso-color-alt: tomato;
+  color: tomato;
+}
+
+<div
+  className="emotion-0"
+/>
+`;
+
 exports[`stylis-plugin-mso returns with mso prefix 1`] = `
 .emotion-0 {
   mso-color-alt: tomato;
