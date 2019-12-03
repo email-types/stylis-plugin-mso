@@ -1,3 +1,11 @@
+## 0.0.1-canary.4 - 2019-12-03
+
+#### 🚀 Updates
+
+- Use latest @email-types/data (#2)
+  ([58fabd7](https://github.com/email-types/stylis-plugin-mso/commit/58fabd7)),
+  closes [#2](https://github.com/email-types/stylis-plugin-mso/issues/2)
+
 ## 0.0.1-canary.3 - 2019-12-01
 
 #### 🐞 Fixes
@@ -26,8 +34,6 @@
   ([47aa3bf](https://github.com/email-types/email-types/commit/47aa3bf)), closes
   [#3](https://github.com/email-types/email-types/issues/3)
 
-**Note:** Version bump only for package stylis-plugin-mso
-
 ## 0.0.1-canary.0 - 2019-11-10
 
 #### 🚀 Updates
@@ -37,5 +43,3 @@
   ([399ef59](https://github.com/email-types/email-types/tree/master/packages/stylis-plugin-mso/commit/399ef59)),
   closes
   [#1](https://github.com/email-types/email-types/tree/master/packages/stylis-plugin-mso/issues/1)
-
-**Note:** Version bump only for package stylis-plugin-mso
