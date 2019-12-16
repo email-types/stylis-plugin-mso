@@ -29,7 +29,7 @@
     "**/*.{js,ts,md,json}": [
       "yarn run pretty"
     ],
-    "**/*.{js,ts}": [
+    "{.github/}**/*.{js,ts}": [
       "yarn run lint --fix"
     ]
   },
