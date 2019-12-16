@@ -3,12 +3,22 @@
 [msotype]:
   https://github.com/email-types/email-types/tree/master/packages/msotype
 
+<div align="center">
+
 # MSO Stylis Plugin
 
 A [Stylis][stylis] plugin that adds support for the `mso-` CSS vendor prefix. It
 automatically adds the `mso-` prefix and `-alt` postfix for all Microsoft Office
 alternative CSS properties (see [msotype][msotype]). It also prevents a leading
 `-` from being added. So you'll get `mso-` instead of `-mso-`.
+
+[![](https://img.shields.io/npm/v/stylis-plugin-mso?color=black&logoColor=white)](https://www.npmjs.com/package/stylis-plugin-mso)
+![](https://img.shields.io/github/workflow/status/email-types/stylis-plugin-mso/Test?logo=github&color=black)
+[![](https://img.shields.io/codecov/c/github/email-types/stylis-plugin-mso?logo=codecov&logoColor=white&color=black)](https://codecov.io/gh/email-types/stylis-plugin-mso)
+[![](https://img.shields.io/bundlephobia/min/stylis-plugin-mso?logo=bundlephobia&color=black)](https://bundlephobia.com/result?p=stylis-plugin-mso)
+[![](https://img.shields.io/bundlephobia/minzip/stylis-plugin-mso?logo=bundlephobia&color=black)](https://bundlephobia.com/result?p=stylis-plugin-mso)
+
+</div>
 
 Install with yarn
 

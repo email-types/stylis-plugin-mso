@@ -29,7 +29,7 @@
     "**/*.{js,ts,md,json}": [
       "yarn run pretty"
     ],
-    "**/*.{js,ts}": [
+    "{.github/}**/*.{js,ts}": [
       "yarn run lint --fix"
     ]
   },
@@ -39,31 +39,31 @@
     }
   },
   "devDependencies": {
-    "@babel/cli": "^7.7.4",
-    "@babel/core": "^7.7.4",
-    "@babel/preset-env": "^7.7.4",
+    "@babel/cli": "^7.7.5",
+    "@babel/core": "^7.7.5",
+    "@babel/preset-env": "^7.7.6",
     "@babel/preset-typescript": "^7.7.4",
-    "@email-types/data": "^1.0.0-canary.3",
+    "@email-types/data": "^1.0.0-canary.4",
     "@emotion/cache": "^10.0.19",
     "@emotion/core": "^10.0.22",
     "@postmates/eslint-config": "^5.1.1",
     "@types/fs-extra": "^8.0.1",
     "@types/jest": "^24.0.23",
-    "@types/node": "^12.12.14",
+    "@types/node": "^12.12.18",
     "@types/prettier": "^1.19.0",
-    "@types/react": "^16.9.14",
+    "@types/react": "^16.9.16",
     "@types/react-test-renderer": "^16.9.1",
     "@typescript-eslint/eslint-plugin": "^2.7.0",
     "@typescript-eslint/parser": "^2.7.0",
     "colors": "^1.4.0",
     "conventional-changelog-beemo": "^1.6.0",
-    "conventional-changelog-cli": "^2.0.28",
+    "conventional-changelog-cli": "^2.0.31",
     "eslint": "^6.7.2",
     "eslint-config-prettier": "^6.7.0",
-    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-import": "^2.19.1",
     "eslint-plugin-jest": "^23.1.1",
     "eslint-plugin-jsx-a11y": "^6.2.3",
-    "eslint-plugin-prettier": "^3.1.1",
+    "eslint-plugin-prettier": "^3.1.2",
     "eslint-plugin-react": "^7.17.0",
     "eslint-plugin-react-hooks": "^1.7.0",
     "fs-extra": "^8.1.0",
@@ -76,7 +76,7 @@
     "react-test-renderer": "^16.12.0",
     "stylis": "^3.5.4",
     "ts-node": "^8.5.4",
-    "typescript": "^3.7.2"
+    "typescript": "^3.7.3"
   },
   "keywords": [
     "css-in-js",
