@@ -1,3 +1,17 @@
+### 0.0.1-canary.5 - 2019-12-23
+
+#### 📦 Dependencies
+
+- Update all deps to latest (#4)
+  ([4f40a60](https://github.com/email-types/stylis-plugin-mso/commit/4f40a60)),
+  closes [#4](https://github.com/email-types/stylis-plugin-mso/issues/4)
+
+#### 🛠 Internals
+
+- Add codecov gh-action (#3)
+  ([db2a199](https://github.com/email-types/stylis-plugin-mso/commit/db2a199)),
+  closes [#3](https://github.com/email-types/stylis-plugin-mso/issues/3)
+
 ## 0.0.1-canary.4 - 2019-12-03
 
 #### 🚀 Updates
