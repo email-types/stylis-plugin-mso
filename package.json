@@ -13,25 +13,25 @@
     "clean": "rm -rf ./dist",
     "prune": "rm -rf ./{,*/,**/*/}{node_modules,coverage,*.lock,*.log,*.tsbuildinfo,dist}",
     "prebuild": "ts-node --project ./tsconfig.node.json ./scripts/generate.ts",
-    "build": "yarn run clean && yarn run build:cjs && yarn run build:esm && yarn run types",
+    "build": "yarn clean && yarn build:cjs && yarn build:esm && yarn types",
     "build:cjs": "TARGET=cjs babel -x .ts,.tsx src -d dist/cjs",
     "build:esm": "TARGET=esm babel -x .ts,.tsx src -d dist/esm",
     "types": "tsc --declarationDir dist/cjs",
-    "test": "yarn build && yarn run lint && yarn run jest",
+    "test": "yarn build && yarn lint && yarn jest",
     "jest": "jest --colors --logHeapUsage",
-    "jest:coverage": "yarn run jest --coverage",
+    "jest:coverage": "yarn jest --coverage",
     "lint": "eslint . --ext js,ts --max-warnings=0 --report-unused-disable-directives",
     "pretty": "prettier \"**/*.{js,ts,md,json}\" --write",
     "changelog": "conventional-changelog -p conventional-changelog-beemo -i CHANGELOG.md -s -r 0",
     "version:canary": "yarn version --prerelease --preid canary",
-    "postversion": "yarn changelog && git reset --soft HEAD~1 && git add . && git commit -m \"release\""
+    "postversion": "yarn changelog && git reset --soft HEAD~1 && git add . && git commit -m \"release $npm_package_version\""
   },
   "lint-staged": {
     "**/*.{js,ts,md,json}": [
-      "yarn run pretty"
+      "yarn pretty"
     ],
     "{.github/}**/*.{js,ts}": [
-      "yarn run lint --fix"
+      "yarn lint --fix"
     ]
   },
   "husky": {
