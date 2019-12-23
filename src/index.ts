@@ -1,18 +1,20 @@
 import { properties } from './data';
 
-type PropertyName = keyof typeof properties;
-
 export type Plugin = (context: number, content: string) => string | void;
 
+export type Options<T> = {
+  prefix: T | boolean;
+};
+
 export const createPlugin = <T>(
-  options: { prefix: T | boolean } = { prefix: true },
+  options: Options<T> = { prefix: true },
 ): Plugin => {
   const plugin: Plugin = (context, content) => {
     // only run on a property declaration
     if (context === 1) {
       if (options.prefix) {
         const [key, value] = content.trim().split(':');
-        const property = properties[(key as unknown) as PropertyName];
+        const property = properties[key];
         if (property) {
           return `${property}:${value};${content}`;
         }
